@@ -21,57 +21,39 @@
     <meta content="" property="og:url"/>
 </head>
 
-<body>
-<div class="container-fluid">
-    <header class="fixed-top" role="banner">
-        <nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark bg-dark " role="navigation">
-            <div class="container">
-                <a class="navbar-brand" href="/">MyWebClass.org</a>
-                <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
-                        class="navbar-toggler"
-                        data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
-                    <span aria-hidden="true" class="navbar-toggler-icon"></span>
-                    <span class="visually-hidden">Toggle navigation</span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="content.html">Content Template</a>
-                        </li>
-                    </ul>
+    <nav class="py-3 d-none d-md-block" aria-label="Breadcrumb">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto text-start">
+                    <ol class="breadcrumb my-0">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Content Template</li>
+                    </ol>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+</header>
 
-        <nav aria-label="Breadcrumb" class="py-3 d-none d-md-block">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-auto text-start">
-                        <ol class="breadcrumb my-0">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li aria-current="page" class="breadcrumb-item active">Content Template</li>
-                        </ol>
-                    </div>
-                </div>
+<div class="container">
+    <div class="row">
+        <nav class="col-md-2 col-lg-2 d-md-block bg-light sidebar collapse position-fixed" id="sidebarMenu"
+             aria-label="Sidebar menu with scrollspy">
+            <div class="position-sticky pt-3">
+                <h2 class="justify-left">Navigation</h2>
+                <!-- Javascript builds out the navigation items -->
             </div>
         </nav>
-    </header>
+        <!-- Main content area -->
+    </div>
+</div>
 
-    <div class="container">
-        <div class="row">
-            <!-- Sidebar menu with scrollspy -->
-            <nav class="col-md-2 col-lg-2 d-md-block bg-light sidebar collapse position-fixed" id="sidebarMenu">
-                <div class="position-sticky pt-3">
-                    <h2 class="justify-left">Navigation</h2>
-                    <!-- Javascript builds out the navigation items -->
-                </div>
-            </nav>
 
-            <!-- Main content area -->
+
             <main class="col-md-9 ms-sm-auto col-lg-9 px-md-4">
 
                 <h1 class="fw-bold border-bottom" id="title">Privacy Policy</h1>
-                <div class="text-muted mb-3 ">By <a href="#">Author Name</a><span class="text-muted me-3"> Last Updated:
+                <div class="text-muted mb-3 ">By <a href="#">Sadikul Saber</a><span class="text-muted me-3"> Last Updated:
               January 1, 2022</span> <span class="text-muted" id="readingTime">0</span>
                 </div>
                 <section class="row">
