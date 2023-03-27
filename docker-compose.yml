@@ -2,9 +2,16 @@ version: "3.8"
 
 services:
     master_branch:
-      image: ssaber5/sprint1:master
+      image: ss889/sprint1:master
+      container_name: development_branch
+      pull_policy: always
+      restart: always
+      ports:
+        - "8000:80"
+      labels:
+        - 'com.centurylinklabs.watchtower.enable=true'
     development_branch:
-      image: ssaber5/sprint1:development
+      image: ss889/sprint1:development
       container_name: development_branch
       pull_policy: always
       restart: always
