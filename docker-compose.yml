@@ -2,8 +2,9 @@ version: "3.8"
 
 services:
     master_branch:
+      image: ss889/sprint1:master
     development_branch:
-      image: kaw393939/mywebclass:development
+      image: ss889/sprint1:development
       container_name: development_branch
       pull_policy: always
       restart: always
