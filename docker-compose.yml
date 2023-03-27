@@ -2,9 +2,9 @@ version: "3.8"
 
 services:
     master_branch:
-      image: ss889/sprint1:master
+      image: ssaber5/sprint1:master
     development_branch:
-      image: ss889/sprint1:development
+      image: ssaber5/sprint1:development
       container_name: development_branch
       pull_policy: always
       restart: always
