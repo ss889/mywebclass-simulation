@@ -68,3 +68,50 @@ test('User should be able to reset their password from the login page', async ({
   await page.goto(resetPasswordLink);
   await page.fill('#new-password', 'newPassword123');
 
+const { chromium } = require('playwright');
+
+describe('Notification preferences and calendar', () => {
+  let browser;
+  let page;
+
+  beforeAll(async () => {
+    browser = await chromium.launch();
+    page = await browser.newPage();
+  });
+
+  afterAll(async () => {
+    await browser.close();
+  });
+
+  it('should allow users to manage their notification preferences and display important dates on a calendar', async () => {
+    // Login as the user
+    await page.goto('https://example.com/login%27);
+    await page.fill('input[name="username"]', 'your-username');
+    await page.fill('input[name="password"]', 'your-password');
+    await page.click('button[name="login"]');
+
+    // Navigate to the notification preferences page
+    await page.goto('https://example.com/notification-preferences%27);
+
+    // Enable or disable notification types as desired
+    const emailCheckbox = await page.$('input[name="email-notifications"]');
+    await emailCheckbox.click();
+
+    const smsCheckbox = await page.$('input[name="sms-notifications"]');
+    await smsCheckbox.click();
+
+    // Save the changes
+    await page.click('button[name="save-changes"]');
+
+    // Verify that the changes were saved successfully
+    const successMessage = await page.$('.success-message');
+    expect(await successMessage.textContent()).toBe('Your notification preferences have been updated.');
+
+    // Navigate to the calendar page
+    await page.goto('https://example.com/calendar%27);
+
+    // Verify that important dates are displayed on the calendar
+    const importantDates = await page.$$('.important-date');
+    expect(importantDates.length).toBeGreaterThan(0);
+  });
+});
