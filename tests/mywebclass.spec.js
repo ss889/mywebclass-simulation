@@ -416,14 +416,5 @@ test('Clicking on the reset password link should take the user to a page to ente
   expect(successMessage).toContain('Your password has been reset successfully.');
 });
 
-
-  
-  
-
     
-    
-    
-    
-    
-  });
-});
+ 
