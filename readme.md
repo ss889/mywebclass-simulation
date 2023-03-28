@@ -63,3 +63,7 @@ Finally, use Playwright to create powerful and reliable automated tests for web 
 
 
 # ADD YOUR PROJECT LINKS BELOW THIS 
+1. [Install Instructions](https://github.com/ss889/mywebclass-simulation/blob/02bfad80c3f011f96e64a55429245135ebc93fbd/install.md)
+2. [Deploy Instructions](https://github.com/ss889/mywebclass-simulation/blob/02bfad80c3f011f96e64a55429245135ebc93fbd/deploy.md)
+3. [Project Repository](https://github.com/ss889/mywebclass-simulation)
+
