@@ -11,3 +11,6 @@ venv
 .github/workflows/*.bak
 .vscode
 docs
+/test-results/
+/playwright-report/
+/playwright/.cache/
