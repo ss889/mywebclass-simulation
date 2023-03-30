@@ -1,27 +1,14 @@
-/* eslint-disable no-undef,  no-unused-vars */
 import '../scss/styles.scss'
-// Import all of Bootstrap's JS
 import { Modal } from 'bootstrap'
-import * as bootstrap from 'bootstrap'
-
 import allPage from './allPages'
 import contentPage from './contentPage'
 
-document.addEventListener('DOMContentLoaded', () => {
+const initialize = () => {
   allPage.initialize()
   contentPage.initialize()
-})
+}
 
-let resizeTimer
-
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimer)
-  resizeTimer = setTimeout(() => {
-    allPage.initialize()
-  }, 250)
-})
-
-function createPrivacyModal () {
+const createPrivacyModal = () => {
   const modalHtml = `
     <div class="modal fade" id="privacyModal" tabindex="-1">
       <div class="modal-dialog">
@@ -47,7 +34,7 @@ function createPrivacyModal () {
   document.body.insertAdjacentHTML('beforeend', modalHtml)
 }
 
-function initializePrivacyModal () {
+const initializePrivacyModal = () => {
   const privacyModal = new Modal(document.getElementById('privacyModal'))
 
   // Check if the user has already agreed to the policy
@@ -71,7 +58,7 @@ function initializePrivacyModal () {
   })
 }
 
-function loadGoogleAnalytics () {
+const loadGoogleAnalytics = () => {
   // Replace "GA_MEASUREMENT_ID" with your Google Analytics Measurement ID
   const gaMeasurementId = 'J2FCEQRZJ1'
 
@@ -102,10 +89,3 @@ function loadGoogleAnalytics () {
   } else {
     // Show the privacy modal if no consent has been given
     initializePrivacyModal()
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  createPrivacyModal()
-  loadGoogleAnalytics()
-})
