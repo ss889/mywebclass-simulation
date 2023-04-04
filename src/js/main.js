@@ -89,3 +89,14 @@ const loadGoogleAnalytics = () => {
   } else {
     // Show the privacy modal if no consent has been given
     initializePrivacyModal()
+
+    module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
+};
