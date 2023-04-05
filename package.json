@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/NJIT-WIS/mywebclass#readme",
   "devDependencies": {
+    "@expo/webpack-config": "^18.0.3",
     "@playwright/test": "^1.32.1",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
